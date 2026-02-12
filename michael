@@ -1,0 +1,32 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double celsius, fahrenheit;
+
+    cout << "--- Weather App: Temperature Converter ---" << endl;
+    cout << "Enter the temperature in Celsius: ";
+
+    // 1. Ask the user for input
+    if (!(cin >> celsius)) {
+        cout << "Invalid input. Please enter a number." << endl;
+        return 1;
+    }
+
+    // 2. Convert it to Fahrenheit
+    // Formula: F = (C * 1.8) + 32
+    fahrenheit = (celsius * 1.8) + 32;
+
+    // 3. Output the result
+    cout << "Temperature in Fahrenheit: " << fahrenheit << "°F" << endl;
+
+    // 4. Bonus: Climate Alerts
+    if (celsius < 0) {
+        cout << "Freezing!" << endl;
+    } else if (celsius > 30) {
+        cout << "Hot!" << endl;
+    }
+
+    return 0;
+}
